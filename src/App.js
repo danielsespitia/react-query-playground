@@ -1,11 +1,12 @@
 import './App.css';
 import { useQuery } from 'react-query';
+import { ReactQueryDevtools } from 'react-query-devtools';
 
 import axios from 'axios';
 
 function Pokemon() {
   //1 arg -> Unique key for fetched data
-  //2 arg -> Function that's gonna grab some data (normally fetch is used and receives an API as an argument)
+  //2 arg -> Function that'ps gonna grab some data (normally fetch is used and receives an API as an argument)
   //when using fetch, be sure to get a json as a result (investigar promesas en detalle)
   //Loading... state
   //Errors
@@ -44,6 +45,7 @@ export default function App() {
   return (
     <div>
       <Pokemon />
+      <ReactQueryDevtools/>
     </div>
   );
 }
